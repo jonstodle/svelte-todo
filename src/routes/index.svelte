@@ -18,9 +18,11 @@
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
-<article>
-	<label>
-		<input type='checkbox'>
-		<span class='checkable'>Noe å gjøre</span>
-	</label>
-</article>
+{#each todos as todo}
+	<article>
+		<label>
+			<input type='checkbox'>
+			<span class='checkable'>{todo.text}</span>
+		</label>
+	</article>
+{/each}
