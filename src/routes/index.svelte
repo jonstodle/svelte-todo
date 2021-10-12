@@ -1,5 +1,6 @@
 <script lang='ts'>
 	import {generateId} from '$lib/utils';
+	import TodosList from '$lib/TodosList.svelte';
 
 	let todoText = "";
 	let todos = [];
@@ -21,3 +22,4 @@
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
+<TodosList todos={todos} />
