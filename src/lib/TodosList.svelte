@@ -1,5 +1,6 @@
 <script lang='ts'>
 	import {todos} from '$lib/store';
+	import {flip} from 'svelte/animate';
 
 	$: sortedTodos = $todos
 		.sort((a, b) => a.done - b.done)
@@ -10,8 +11,8 @@
 	}
 </script>
 
-{#each sortedTodos as todo}
-	<article>
+{#each sortedTodos as todo (todo.id)}
+	<article animate:flip>
 		<label>
 			<input type='checkbox' bind:checked={todo.done}>
 			<span class='checkable' class:done={todo.done}>{todo.text}</span>
