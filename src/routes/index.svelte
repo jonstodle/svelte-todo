@@ -4,7 +4,7 @@
 	let todoText = "";
 	let todos = [];
 
-	let sortedTodos = todos
+	$: sortedTodos = todos
 		.sort((a, b) => a.done - b.done)
 
 	const addTodo = () => {
@@ -21,7 +21,7 @@
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
-{#each todos as todo}
+{#each sortedTodos as todo}
 	<article>
 		<label>
 			<input type='checkbox' bind:checked={todo.done}>
