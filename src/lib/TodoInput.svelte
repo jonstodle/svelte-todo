@@ -1,10 +1,11 @@
 <script lang='ts'>
 	import { generateId } from '$lib/utils';
+	import {todos} from '$lib/store.ts';
 
 	let todoText = "";
 
 	const addTodo = () => {
-		todos = [...todos, {
+		$todos = [...$todos, {
 			id: generateId(),
 			text: todoText,
 			done: false,
