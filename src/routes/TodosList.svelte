@@ -1,5 +1,5 @@
 <script lang='ts'>
-	let todos = []
+	export let todos = []
 
 	$: sortedTodos = todos
 		.sort((a, b) => a.done - b.done)
