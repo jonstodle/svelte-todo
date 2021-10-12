@@ -16,7 +16,7 @@
 
 <h1>Gjøremålsapp</h1>
 
-<input type='text' bind:value={todoText}>
+<input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
 <article>
 	<label>
