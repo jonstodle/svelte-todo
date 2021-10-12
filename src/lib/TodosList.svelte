@@ -16,6 +16,9 @@
 			<input type='checkbox' bind:checked={todo.done}>
 			<span class='checkable' class:done={todo.done}>{todo.text}</span>
 		</label>
+		<button class='error' on:click={() => removeTodo(todo)}>
+			Fjern
+		</button>
 	</article>
 {/each}
 
