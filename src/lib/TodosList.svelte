@@ -1,7 +1,7 @@
 <script lang='ts'>
-	export let todos = []
+	import {todos} from '$lib/store';
 
-	$: sortedTodos = todos
+	$: sortedTodos = $todos
 		.sort((a, b) => a.done - b.done)
 </script>
 

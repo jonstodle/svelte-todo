@@ -1,10 +1,9 @@
 <script lang='ts'>
 	import TodosList from '$lib/TodosList.svelte';
 	import TodoInput from '$lib/TodoInput.svelte';
+	import {todos} from '$lib/store';
 
-	let todos = [];
-
-	$: todosNotDone = todos
+	$: todosNotDone = $todos
 		.filter(t => !t.done)
 </script>
 
@@ -12,4 +11,4 @@
 
 <TodoInput />
 
-<TodosList {todos} />
+<TodosList />
