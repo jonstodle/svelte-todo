@@ -26,4 +26,14 @@
   .done {
     text-decoration: line-through;
   }
+
+	article {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+
+	button {
+		font-size: .7em;
+	}
 </style>
