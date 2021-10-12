@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import {todos} from '$lib/store';
 	import {flip} from 'svelte/animate';
-	import {slide} from 'svelte/transition';
+	import {slide, fade} from 'svelte/transition';
 
 	$: sortedTodos = $todos
 		.sort((a, b) => a.done - b.done)
@@ -13,7 +13,7 @@
 </script>
 
 {#each sortedTodos as todo (todo.id)}
-	<article animate:flip transition:slide>
+	<article animate:flip in:slide out:fade>
 		<label>
 			<input type='checkbox' bind:checked={todo.done}>
 			<span class='checkable' class:done={todo.done}>{todo.text}</span>
