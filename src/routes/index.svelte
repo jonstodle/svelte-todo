@@ -22,4 +22,4 @@
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
-<TodosList todos={todos} />
+<TodosList {todos} />
