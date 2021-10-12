@@ -7,6 +7,9 @@
 	$: sortedTodos = todos
 		.sort((a, b) => a.done - b.done)
 
+	$: todosNotDone = sortedTodos
+		.filter(t => !t.done)
+
 	const addTodo = () => {
 		todos = [...todos, {
 			id: generateId(),
@@ -17,7 +20,7 @@
 	}
 </script>
 
-<h1>{todos.length} gjenstående</h1>
+<h1>{todosNotDone.length} gjenstående</h1>
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
