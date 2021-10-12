@@ -26,3 +26,9 @@
 		</label>
 	</article>
 {/each}
+
+<style>
+	.done {
+		text-decoration: line-through;
+	}
+</style>
