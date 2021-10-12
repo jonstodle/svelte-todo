@@ -4,7 +4,7 @@
 
 <h1>Gjøremålsapp</h1>
 
-<input type='text'>
+<input type='text' bind:value={todoText}>
 
 <article>
 	<label>
