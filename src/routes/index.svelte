@@ -5,11 +5,11 @@
 	let todos = [];
 
 	const addTodo = () => {
-		todos.push({
+		todos = [...todos, {
 			id: generateId(),
 			text: todoText,
 			done: false,
-		});
+		}];
 		todoText = "";
 	}
 </script>
