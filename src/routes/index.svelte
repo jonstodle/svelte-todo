@@ -21,7 +21,7 @@
 {#each todos as todo}
 	<article>
 		<label>
-			<input type='checkbox'>
+			<input type='checkbox' bind:checked={todo.done}>
 			<span class='checkable'>{todo.text}</span>
 		</label>
 	</article>
