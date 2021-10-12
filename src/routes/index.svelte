@@ -4,6 +4,9 @@
 	let todoText = "";
 	let todos = [];
 
+	let sortedTodos = todos
+		.sort((a, b) => a.done - b.done)
+
 	const addTodo = () => {
 		todos = [...todos, {
 			id: generateId(),
