@@ -4,10 +4,7 @@
 	let todoText = "";
 	let todos = [];
 
-	$: sortedTodos = todos
-		.sort((a, b) => a.done - b.done)
-
-	$: todosNotDone = sortedTodos
+	$: todosNotDone = todos
 		.filter(t => !t.done)
 
 	const addTodo = () => {
@@ -24,17 +21,3 @@
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
-{#each sortedTodos as todo}
-	<article>
-		<label>
-			<input type='checkbox' bind:checked={todo.done}>
-			<span class='checkable' class:done={todo.done}>{todo.text}</span>
-		</label>
-	</article>
-{/each}
-
-<style>
-	.done {
-		text-decoration: line-through;
-	}
-</style>
