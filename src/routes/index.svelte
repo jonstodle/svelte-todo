@@ -22,7 +22,7 @@
 	<article>
 		<label>
 			<input type='checkbox' bind:checked={todo.done}>
-			<span class='checkable'>{todo.text}</span>
+			<span class='checkable' class:done={todo.done}>{todo.text}</span>
 		</label>
 	</article>
 {/each}
