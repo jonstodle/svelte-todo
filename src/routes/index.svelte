@@ -1,5 +1,6 @@
 <script lang='ts'>
 	let todoText = "";
+	let todos = [];
 </script>
 
 <h1>Gjøremålsapp</h1>
