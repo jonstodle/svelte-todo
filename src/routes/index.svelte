@@ -14,7 +14,7 @@
 	}
 </script>
 
-<h1>Gjøremålsapp</h1>
+<h1>{todos.length} gjenstående</h1>
 
 <input type='text' bind:value={todoText} on:keydown={(e) => e.key == "Enter" && addTodo()}>
 
