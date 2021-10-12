@@ -3,6 +3,11 @@
 
 	$: sortedTodos = $todos
 		.sort((a, b) => a.done - b.done)
+
+	const removeTodo = (todo) => {
+		$todos = $todos
+			.filter(t => t != todo)
+	}
 </script>
 
 {#each sortedTodos as todo}
