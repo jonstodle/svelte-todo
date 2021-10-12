@@ -1,3 +1,7 @@
+<script lang='ts'>
+	let todoText = "";
+</script>
+
 <h1>Gjøremålsapp</h1>
 
 <input type='text'>
