@@ -13,7 +13,7 @@
 </script>
 
 {#each sortedTodos as todo (todo.id)}
-	<article animate:flip in:slide out:fade>
+	<article animate:flip in:slide={{duration: 1000}} out:fade>
 		<label>
 			<input type='checkbox' bind:checked={todo.done}>
 			<span class='checkable' class:done={todo.done}>{todo.text}</span>
